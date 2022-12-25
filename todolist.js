@@ -34,7 +34,7 @@ var todolistapp=(function(){
         taskcounter.innerHTML=tasks.length;
     }
     // task is done or not
-    function toggelTask(taskId) {
+    function toggleTask(taskId) {
         const task=tasks.filter(function(task){
             return task.id===Number(taskId)
         })
@@ -43,10 +43,10 @@ var todolistapp=(function(){
             console.log(currentTask)
             currentTask.completed=!currentTask.completed
             renderList()
-            showNotification('task toggel successfully!')
+            showNotification('task toggle successfully!')
             return
         } 
-        showNotification('could not toggel task')
+        showNotification('could not toggle task')
     
     }
     // for delete the task
@@ -102,7 +102,7 @@ var todolistapp=(function(){
         }
         else if(target.className==="custom-checkbox"){
             const taskId=target.id;
-            toggelTask(taskId);
+            toggleTask(taskId);
             return;
         }
     }
